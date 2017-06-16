@@ -1,23 +1,20 @@
 import React, { Component } from 'react';
 
+import { Router, browserHistory } from 'react-router';
+
 import 'material-design-lite/material.min.js';
 import './material.min.css';
 import './icon.css';
 import './App.css';
 
-import Au2 from './modules/Au2';
+import routes from './routes';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      page: 'homepage'
-    };
-  }
+  
 
   render() {
     return (
-      <Au2></Au2>
+      <Router history={browserHistory} routes={routes}/>
     );
   }
 }

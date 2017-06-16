@@ -1,0 +1,18 @@
+.mdl-card__title {
+
+}
+
+.fileinput-holder {
+	position: relative;
+	display: block;
+}
+.fileinput-hidden-button {
+	position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    opacity: 0;
+    font-size: 85px;
+    direction: ltr;
+    cursor: pointer;
+}
