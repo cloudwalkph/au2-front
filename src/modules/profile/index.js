@@ -83,9 +83,8 @@ class profile extends Component {
 									<span className="mdl-textfield__error">Letters only</span>
 								</div>
 								<div className="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
-									<input className="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*"/>
+									<input className="mdl-textfield__input" type="text"/>
 									<label className="mdl-textfield__label" htmlFor="sample2">Email Address</label>
-									<span className="mdl-textfield__error">Letters only</span>
 								</div>
 								<div className="mdl-textfield mdl-js-textfield mdl-cell mdl-cell--6-col">
 									<input className="mdl-textfield__input" type="text" pattern="[A-Z,a-z]*"/>
