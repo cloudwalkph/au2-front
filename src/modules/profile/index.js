@@ -32,11 +32,11 @@ class profile extends Component {
 		
 	}
 
-	getProfileDate = () => {
+	getProfileData = () => {
 		let url = appConfig.apiUrl + '1';
 		
 		axios.get(url).then((response) => {
-			
+			// console.log(response)
 			this.setState({
 				first_name : response.data.first_name,	
 				last_name : response.data.last_name,	
@@ -47,7 +47,8 @@ class profile extends Component {
 				driver_license_date : response.data.driver_license_expiration,	
 				city : response.data.user_address.city,	
 				country : response.data.user_address.country,	
-				address : response.data.user_address.address
+				address : response.data.user_address.address,
+				imgSrc : `${appConfig.staticFiles}${response.data.profile_picture}`
 			});
 		}).catch((error)=> {
 			console.log(error);
@@ -74,8 +75,8 @@ class profile extends Component {
 		});
 	}
 
-	componentDidMount() {
-		this.getProfileDate();
+	componentWillMount() {
+		this.getProfileData();
 
 		/*var dialog = document.querySelector('dialog');
 		var showDialogButton = document.querySelector('#show-dialog');
